@@ -55,7 +55,11 @@ export function useTaskService() {
   }
 
   const selectedTask = (task: Task): void => {
-    enableEdit.value = task
+    if (enableEdit.value.id === 0) {
+      enableEdit.value = task
+      return
+    }
+    enableEdit.value = defaultEdit
   }
 
   const putTask = (taskToEdit: taskEdit): void => {
