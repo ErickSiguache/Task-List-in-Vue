@@ -1,6 +1,6 @@
 # Aplicación de Tareas con Vue.js
 
-He creado esta aplicación de tareas con el propósito de practicar y mejorar mis habilidades en el desarrollo de aplicaciones con Vue.js y TypeScript. He utilizado la `Composition API`, haciendo uso del `script setup` en toda la aplicación. Además, integré la biblioteca `Vue 3 Toastify` para mostrar notificaciones al agregar una nueva tarea o ante cualquier error, y también empleé la biblioteca de iconos F`ort Awesome` para incluir iconos en la interfaz de usuario.
+Se ha creado esta aplicación de tareas con el propósito de practicar y mejorar mis habilidades en el desarrollo de aplicaciones con Vue.js y TypeScript. He utilizado la `Composition API`, haciendo uso del `script setup` en toda la aplicación. Además, integré la biblioteca `Vue 3 Toastify` para mostrar notificaciones al agregar una nueva tarea o ante cualquier error, y también empleé la biblioteca de iconos `Fort Awesome` para incluir iconos en la interfaz de usuario.
 
 
 ### Clonar e instalar las Dependencias:
