@@ -26,7 +26,7 @@ export function useTaskService() {
       const newTask: Task = {
         id: tasks.value.length + 1,
         name: taskNameAdd,
-        state: 'incomplete'
+        state: listTypes.incomplete
       }
 
       if (filterTaskByName(nameTask).length > 0) {
