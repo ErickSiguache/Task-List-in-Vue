@@ -1,10 +1,15 @@
 import 'vue3-toastify/dist/index.css'
 import { toast, type ToastType } from 'vue3-toastify'
 
-export const toastComponent = (alertType: ToastType, message: string): void => {
-  toast(message, {
+interface IToast {
+  alertType: ToastType
+  message: string
+}
+
+export const toastComponent = (info: IToast): void => {
+  toast(info.message, {
     theme: 'colored',
-    type: alertType,
+    type: info.alertType,
     position: 'bottom-right',
     dangerouslyHTMLString: true
   })
