@@ -6,15 +6,19 @@ defineProps<{
   tasks: Task[]
 }>()
 
-const styleCheckButton = (stateTask: stateTypes) => {
-  return stateTask === listTypes.incomplete ? 'fa-regular' : 'fa-solid'
+defineEmits<{
+  delete: [value: number]
+  changeState: [values: Task]
+  select: [values: Task]
+}>()
+
+const styleCheckButton = (state: stateTypes) => {
+  return state === listTypes.incomplete ? 'fa-regular' : 'fa-solid'
 }
 
 const styleComplete = (state: stateTypes) => {
   return state === listTypes.complete ? 'text-decoration-complete' : ''
 }
-
-defineEmits(['delete', 'changeState', 'select'])
 </script>
 <template>
   <main>

@@ -4,7 +4,10 @@ import { type Ref, ref, watch } from 'vue'
 
 const inputText: Ref<string> = ref('')
 
-const emits = defineEmits(['add', 'edit'])
+const emits = defineEmits<{
+  add: [value: string]
+  edit: [data: taskEdit]
+}>()
 
 const props = defineProps<{
   placeholderText: string
