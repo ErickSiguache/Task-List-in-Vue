@@ -3,7 +3,7 @@ import './assets/main.css'
 import { createApp } from 'vue'
 import App from './App.vue'
 
-import { enableUseIcons } from './configurations/FontAwesonIconsConfiguration'
+import { enableUseIcons } from './configurations/fontAwesonIconsConfiguration'
 import { enableUseToast } from './configurations/toastifyConfiguration'
 
 const app = createApp(App)
