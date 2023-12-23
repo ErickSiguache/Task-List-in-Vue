@@ -64,6 +64,21 @@ export function useTaskService() {
 
   const putTask = (taskToEdit: taskEdit): void => {
     try {
+      const taskNotRepeat = tasks.value.find((task) => {
+        if (task.name === taskToEdit.name && task.id !== taskToEdit.id) {
+          return task
+        }
+      })
+
+      if (taskNotRepeat) {
+        enableEdit.value = defaultEdit
+        toastComponent({
+          alertType: 'error',
+          message: 'Ya existe otra tarea con el mismo nombre.'
+        })
+        return
+      }
+
       tasks.value.map((task: Task) => {
         if (task.id === taskToEdit.id) {
           task.name = stringValidator(taskToEdit.name)
